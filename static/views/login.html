@@ -60,7 +60,7 @@
                 <input type="password" class="form-control" id="code" placeholder="请输入验证码">
               </div >
               <div class="col-sm-4 code">
-                <img src="/login/captchaImg" alt="">
+                <img src="/login/captchaImg" class="captchaImg" alt="">
               </div>
             </div>
             
@@ -85,3 +85,12 @@
 <script src="../lib/js/jquery-1.12.4.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../lib/js/bootstrap.min.js"></script>
+<script>
+  $(function () {
+     $('.captchaImg').click(function () {
+    // console.log(1)
+    $(this).attr('src',$(this).attr('src')+`?${Math.random()}`)
+  })
+  })
+ 
+</script>
